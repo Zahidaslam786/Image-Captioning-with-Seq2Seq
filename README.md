@@ -14,14 +14,14 @@ This project implements a "Neural Storyteller" capable of understanding visual s
 ## 🏗️ Model Architecture
 
 ### 1. Encoder (Feature Extraction)
-* [cite_start]**Pre-trained Model:** ResNet50[cite: 27, 61].
-* [cite_start]**Logic:** The final classification layer was removed to "cache" images into 2048-dimensional feature vectors[cite: 27, 81].
-* [cite_start]**Optimization:** Image features are saved into a `flickr30k_features.pkl` file to avoid expensive re-computation during training[cite: 26, 28].
+* **Pre-trained Model:** ResNet50.
+* **Logic:** The final classification layer was removed to "cache" images into 2048-dimensional feature vectors.
+* **Optimization:** Image features are saved into a `flickr30k_features.pkl` file to avoid expensive re-computation during training.
 
 ### 2. Decoder (Sequence Generation)
-* [cite_start]**Architecture:** LSTM-based Recurrent Neural Network[cite: 83].
-* [cite_start]**Input:** Word Embeddings of captions concatenated with image features[cite: 84, 86].
-* [cite_start]**Vocabulary:** Built from `captions.txt` with a frequency threshold to ensure robust learning[cite: 78].
+* **Architecture:** LSTM-based Recurrent Neural Network.
+* **Input:** Word Embeddings of captions concatenated with image features.
+* **Vocabulary:** Built from `captions.txt` with a frequency threshold to ensure robust learning.
 
 ---
 
@@ -33,28 +33,28 @@ The model was evaluated using standard NLP metrics to ensure caption quality:
 * **Recall:** 0.3311
 * **F1-Score:** 0.3527
 
+<img width="855" height="470" alt="image" src="https://github.com/user-attachments/assets/4a87255e-d767-4d9a-809d-24216f722b1b" />
 
 
 ---
 
 ## 🛠️ Key Features
-* [cite_start]**Dual Inference Methods:** Supports both **Greedy Search** and **Beam Search** (k=3) for generating captions[cite: 90].
-* [cite_start]**Data Pre-processing:** Automated text cleaning and tokenization pipeline[cite: 78].
-* [cite_start]**Interactive App:** Integrated with **Gradio** for real-time image upload and captioning[cite: 101].
+* **Dual Inference Methods:** Supports both **Greedy Search** and **Beam Search** (k=3) for generating captions.
+* **Data Pre-processing:** Automated text cleaning and tokenization pipeline.
+* **Interactive App:** Integrated with **Gradio** for real-time image upload and captioning.
 
 ---
 
 ## 💻 Environment Setup
-* [cite_start]**Platform:** Kaggle / Google Colab[cite: 22].
-* [cite_start]**Accelerator:** GPU T4 x2 (Dual GPU)[cite: 23].
-* [cite_start]**Dataset:** [Flickr30k Dataset](https://www.kaggle.com/datasets/adityajn105/flickr30k)[cite: 24].
+* **Platform:** Kaggle / Google Colab.
+* **Accelerator:** GPU T4 x2 (Dual GPU).
+* **Dataset:** [Flickr30k Dataset](https://www.kaggle.com/datasets/adityajn105/flickr30k).
 
----
+<img width="1305" height="589" alt="image" src="https://github.com/user-attachments/assets/d671d0d1-de26-4dc7-9fb5-161a0ce712fd" />
 
-## 📂 Deliverables
-1. [cite_start]**Model Notebook:** Complete `.ipynb` file named `AI_ASS01_22F_3394`[cite: 13].
-2. [cite_start]**Loss Curve:** Plot showing training progress over epochs[cite: 95, 96].
-3. [cite_start]**App Deployment:** Streamlit/Gradio application link[cite: 101].
+<img width="1309" height="597" alt="image" src="https://github.com/user-attachments/assets/66aa1713-042a-4085-8791-8f03a82079af" />
+
+<img width="593" height="433" alt="image" src="https://github.com/user-attachments/assets/b941d09a-388d-4612-9d5d-214ffa8f0b93" />
 
 ---
 
